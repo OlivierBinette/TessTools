@@ -1,0 +1,44 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# TessTools: Tools for the use of Tesseract OCR in R
+
+![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
+
+Interface to the Tesseract OCR command line tool and parsing functions. This is under development.
+
+
+## Installation
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("OlivierBinette/TessTools")
+```
+## Example
+
+Run Tesseract OCR on newspaper scans. Extract paragraph text and bounding boxes.
+
+```{r example}
+library(TessTools)
+
+# Run Tesseract OCR and get hocr output file paths.
+outputfiles = hocr_from_zip("data-raw/dchnp71001.zip", outputdir="data-raw")
+
+# Extract paragraph text from the first page.
+text = paragraphs(outputfiles[[1]])
+tail(text)
+```
