@@ -13,7 +13,7 @@
 #'
 #' @import parallel here
 #' @export
-hocr_from_images <- function(imgfiles, outputdir=here(), silent=FALSE, options="") {
+hocr_from_images <- function(imgfiles, outputdir=".", silent=FALSE, options="") {
 
   imgnames = basename(tools::file_path_sans_ext(imgfiles))
   n = length(imgfiles)
@@ -24,7 +24,7 @@ hocr_from_images <- function(imgfiles, outputdir=here(), silent=FALSE, options="
   }
   parallel::mclapply(1:n, function(i) {
     cmd = paste("tesseract",
-                imgfiles[[i]],
+                normalizePath(imgfiles[[i]]),
                 file.path(outputdir, imgnames[[i]]),
                 "hocr",
                 options)
@@ -83,7 +83,9 @@ visualize_html <- function(hocr_file, outputdir=".") {
   txt = readr::read_file(hocr_file)
   txt = stringi::stri_replace(txt, '<script src="https://unpkg.com/hocrjs"></script></body>', regex='</body>')
 
-  cat(txt, file=file.path(outputdir, filename))
+  filepath = file.path(outputdir, filename)
+  cat(txt, file=filepath)
+  return(filepath)
 }
 
 #' Extract text paragraphs and bounding boxes from hocr file.

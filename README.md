@@ -21,13 +21,14 @@ devtools::install_github("OlivierBinette/TessTools")
 ## Example
 
 Run Tesseract OCR on newspaper scans. Extract paragraph text and
-bounding boxes.
+bounding boxes:
 
 ``` r
 library(TessTools)
 
 # Run Tesseract OCR and get hocr output file paths.
-outputfiles = hocr_from_zip("data-raw/dchnp71001.zip", outputdir="data-raw")
+# outputdir is the directory where hocr files are stored, exdir is where images are extracted to.
+outputfiles = hocr_from_zip("data-raw/dchnp71001.zip", outputdir="data-raw", exdir="data-raw")
 #> Running tesseract-OCR on 4 image files.
 
 # Extract paragraph text from the first page.
@@ -43,3 +44,12 @@ tail(text)
 #> 5 4159  7573  4725  7621  "(Continued on third page.)"                          
 #> 6 0     0     5150  8000  ""
 ```
+
+Visualize result using [hocrjs](https://github.com/kba/hocrjs):
+
+``` r
+webpage = visualize_html(outputfiles[[1]], outputdir="data-raw") # webpage is at data-raw/dchnp71001-html
+browseURL(webpage) # Note: bring up the hocrjs menu and select "show background image"
+```
+
+![](hocrjs.png)
