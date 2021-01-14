@@ -25,10 +25,6 @@ bounding boxes.
 
 ``` r
 library(TessTools)
-#> Warning: replacing previous import 'readr::guess_encoding' by
-#> 'rvest::guess_encoding' when loading 'TessTools'
-#> Warning: replacing previous import 'purrr::pluck' by 'rvest::pluck' when loading
-#> 'TessTools'
 
 # Run Tesseract OCR and get hocr output file paths.
 outputfiles = hocr_from_zip("data-raw/dchnp71001.zip", outputdir="data-raw")
