@@ -10,7 +10,22 @@ This is under development.
 
 ## Installation
 
-You can install the development version from
+Make sure you have the
+[tesseract](https://github.com/tesseract-ocr/tesseract) command line
+program installed and available in PATH. You can either [Install
+Tesseract via pre-built binary
+package](https://tesseract-ocr.github.io/tessdoc/Home.html) or [build it
+from source](https://tesseract-ocr.github.io/tessdoc/Compiling.html).
+
+``` bash
+$ tesseract
+Usage:
+  tesseract --help | --help-extra | --version
+  tesseract --list-langs
+  tesseract imagename outputbase [options...] [configfile...]
+```
+
+You can install the development version of `TessTools` from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -37,11 +52,11 @@ tail(text)
 #> # A tibble: 6 x 5
 #>   bbox1 bbox2 bbox3 bbox4 text                                                  
 #>   <chr> <chr> <chr> <chr> <chr>                                                 
-#> 1 4001  5810  4872  6309  "ural forces to do the work which we would make cheap…
-#> 2 4221  6182  4872  6455  "forces of our we under I answer unhesitatingly,"     
-#> 3 4006  6327  4874  6729  "labor, which should take? educate and train our own …
-#> 4 4008  6770  4924  7554  "At Whitney there is being .de veloped a water power …
-#> 5 4159  7573  4725  7621  "(Continued on third page.)"                          
+#> 1 4007  6399  4134  6440  "take?"                                               
+#> 2 4007  6478  4170  6512  "educat"                                              
+#> 3 4006  6400  4874  6729  "I answer unhesitatingly, and train our own people to…
+#> 4 4008  6770  4924  7554  "At Whitney there is being de veloped a water power w…
+#> 5 4159  7573  4725  7621  "(Continued on third page. )"                         
 #> 6 0     0     5150  8000  ""
 ```
 

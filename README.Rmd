@@ -22,7 +22,18 @@ Interface to the Tesseract OCR command line tool and parsing functions. This is 
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/) with:
+Make sure you have the [tesseract](https://github.com/tesseract-ocr/tesseract) command line program installed and available in PATH. You can either [Install Tesseract via pre-built binary package](https://tesseract-ocr.github.io/tessdoc/Home.html)
+or [build it from source](https://tesseract-ocr.github.io/tessdoc/Compiling.html).
+
+```bash
+$ tesseract
+Usage:
+  tesseract --help | --help-extra | --version
+  tesseract --list-langs
+  tesseract imagename outputbase [options...] [configfile...]
+```
+
+You can install the development version of `TessTools` from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
