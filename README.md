@@ -76,18 +76,15 @@ article to which they belong.
 
 ``` r
 # Ground truth for first page
-tail(vol1_paragraphs_truth[[1]])
+vol1_paragraphs_truth[[1]][9:11, ]
 ```
 
 <div class="kable-table">
 
-|    | bbox1 | bbox2 | bbox3 | bbox4 | text                                                                                                                                                                                                                                                                                                                                                           | articleID | category | note                    |
-| :- | ----: | ----: | ----: | ----: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------: | :------- | :---------------------- |
-| 94 |  4001 |  5810 |  4872 |  6309 | ural forces to do the work which we would make cheap laborers do if we’ tinderteok to use cheap labor instead of natural forces. For example, as between util izing the rivers versus importing Chinese coolie                                                                                                                                                 |         2 | text     |                         |
-| 95 |  4221 |  6182 |  4872 |  6455 | forces of our we under I answer unhesitatingly,                                                                                                                                                                                                                                                                                                                |         2 | text     | segmentation error      |
-| 96 |  4006 |  6327 |  4874 |  6729 | labor, which should take? educate and train our own people to develop and use the water pow ers rather than import any alien race for labor.                                                                                                                                                                                                                   |         2 | text     |                         |
-| 97 |  4008 |  6770 |  4924 |  7554 | At Whitney there is being .de veloped a water power which will yield over forty thousand horse power. This is the equivalent of 320,000 coolies.. As long as we depended on slave labor our im mense natutal resources and forces remained undeveloped and use less. Now that we are relying upon free and independent. white . labor again and that the com e |         2 | text     |                         |
-| 98 |  4159 |  7573 |  4725 |  7621 | (Continued on third page.)                                                                                                                                                                                                                                                                                                                                     |         2 | text     | continued on third page |
-| 99 |     0 |     0 |  5150 |  8000 |                                                                                                                                                                                                                                                                                                                                                                |        NA |          |                         |
+|    | bbox1 | bbox2 | bbox3 | bbox4 | text                                                         | articleID | category | note |
+| :- | ----: | ----: | ----: | ----: | :----------------------------------------------------------- | --------: | :------- | :--- |
+| 9  |   481 |  1251 |  1099 |  1314 | HESPERIAN VS. COLUMBIAN.                                     |         1 | title    |      |
+| 10 |   361 |  1394 |  1225 |  1554 | Sixteenth Annual Inter-Society Debate —Won By the Hesperian. |         1 | title    |      |
+| 11 |   424 |  1592 |   822 |  1653 | A great debate\!                                             |         1 | text     |      |
 
 </div>

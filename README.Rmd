@@ -71,7 +71,7 @@ browseURL(webpages[[1]]) # Note: bring up the hocrjs menu and select "show backg
 
 Paragraphs of the first issue have been annotated according to the article to which they belong.
 
-```{r}
+```{r, max.print=3}
 # Ground truth for first page
-tail(vol1_paragraphs_truth[[1]])
+vol1_paragraphs_truth[[1]][9:11, ]
 ```
