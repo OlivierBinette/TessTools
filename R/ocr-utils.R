@@ -15,6 +15,7 @@
 #' @export
 hocr_from_images <- function(imgfiles, outputdir=".", silent=FALSE, options="") {
 
+  if (!dir.exists(outputdir)) dir.create(outputdir)
   imgnames = basename(tools::file_path_sans_ext(imgfiles))
   n = length(imgfiles)
 
@@ -53,9 +54,10 @@ hocr_from_zip <- function(zipped, outputdir=".", exdir=NULL, silent=FALSE, optio
 
   if (is.null(exdir)) {
     exdir = file.path(tempdir(), "exdir")
-    if (!dir.exists(exdir)) dir.create(exdir)
     purge = TRUE
   } else purge = FALSE
+
+  if (!dir.exists(exdir)) dir.create(exdir)
 
   imgfiles = unzip(zipped, exdir=exdir)
   res = hocr_from_images(imgfiles, outputdir=outputdir, silent=silent, options=options)
@@ -69,48 +71,55 @@ hocr_from_zip <- function(zipped, outputdir=".", exdir=NULL, silent=FALSE, optio
 #'
 #' This function creates an html file which can be opened in the browser and which showcases the hocr output using hocrjs.
 #'
-#' @usage visualize_html(hocr_file, outputdir=".")
+#' @usage visualize_html(hocr_files, outputdir=".")
 #'
-#' @param hocr_file hocr file path to visualize.
+#' @param hocr_files list of  hocr file paths to visualize.
 #' @param outputdir directory where to store the viewable html. This html file has the same name as the hocr file and can be opened in any browser.
 #'
 #' @import readr stringi
 #' @export
-visualize_html <- function(hocr_file, outputdir=".") {
-  assert(file.exists(hocr_file))
-  filename = paste0(basename(tools::file_path_sans_ext(hocr_file)), ".html")
+visualize_html <- function(hocr_files, outputdir=".") {
+  assert(file.exists(hocr_files))
+  if (!dir.exists(outputdir)) dir.create(outputdir)
 
-  txt = readr::read_file(hocr_file)
-  txt = stringi::stri_replace(txt, '<script src="https://unpkg.com/hocrjs"></script></body>', regex='</body>')
+  filenames = paste0(basename(tools::file_path_sans_ext(hocr_files)), ".html")
+  filepaths = file.path(outputdir, filenames)
 
-  filepath = file.path(outputdir, filename)
-  cat(txt, file=filepath)
-  return(filepath)
+  sapply(1:length(hocr_files), function(i) {
+    txt = readr::read_file(hocr_files[[i]])
+    txt = stringi::stri_replace(txt, '<script src="https://unpkg.com/hocrjs"></script></body>', regex='</body>')
+    cat(txt, file=filepaths[[i]])
+  })
+
+  return(filepaths)
 }
 
 #' Extract text paragraphs and bounding boxes from hocr file.
 #'
 #' Contructs a dataframe containing paragraphs and bounding boxes from an hocr file created by tesseract-OCR.
 #'
-#' @usage paragraphs(hocr_file)
+#' @usage paragraphs(hocr_files)
 #'
-#' @param hocr_file path to hocr file.
+#' @param hocr_files list of paths to hocr file.
 #'
 #' @return dataframe with columns "bbox1", "bbox2", "bbox3", "bbox4" and "text" for the four corners of the paragraph bounding box and the text content.
 #'
 #' @import xml2 rvest stringr stringi dplyr purrr
 #' @export
-paragraphs <- function(hocr_file) {
-  hocr_file %>%
-    xml2::read_html() %>%
-    rvest::html_nodes(".ocr_par") %>%
-    purrr::map_dfr(function(x) {
-      c(bbox = strsplit(html_attrs(x)[["title"]], " ")[[1]][2:5],
-        text = x %>%
-          rvest::html_text() %>%
-          stringi::stri_replace_all("", fixed="\n") %>%
-          stringi::stri_replace_all("", fixed="- ") %>%
-          stringr::str_squish())
+paragraphs <- function(hocr_files) {
+  hocr_files %>%
+    lapply(function(hocr_file) {
+      hocr_file %>%
+        xml2::read_html() %>%
+        rvest::html_nodes(".ocr_par") %>%
+        purrr::map_dfr(function(x) {
+          c(bbox = strsplit(html_attrs(x)[["title"]], " ")[[1]][2:5],
+            text = x %>%
+              rvest::html_text() %>%
+              stringi::stri_replace_all("", fixed="\n") %>%
+              stringi::stri_replace_all("", fixed="- ") %>%
+              stringr::str_squish())
+        })
     })
 }
 

@@ -5,8 +5,9 @@
 
 ![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 
-Interface to the Tesseract OCR command line tool and parsing functions.
-This is under development.
+Interface to the Tesseract OCR command line tool (version 4) and parsing
+functions for the analysis of historical newspaper archives. This is
+under development.
 
 ## Installation
 
@@ -42,29 +43,51 @@ bounding boxes:
 library(TessTools)
 
 # Run Tesseract OCR and get hocr output file paths.
-# outputdir is the directory where hocr files are stored, exdir is where images are extracted to.
-outputfiles = hocr_from_zip("data-raw/dchnp71001.zip", outputdir="data-raw", exdir="data-raw")
+# Newspaper scans from https://library.duke.edu/digitalcollections/dukechronicle_dchnp71001/
+outputfiles = hocr_from_zip("data-raw/dchnp71001.zip", outputdir="data-raw/hocr", exdir="data-raw/img")
 #> Running tesseract-OCR on 4 image files.
 
-# Extract paragraph text from the first page.
-text = paragraphs(outputfiles[[1]])
-tail(text)
-#> # A tibble: 6 x 5
-#>   bbox1 bbox2 bbox3 bbox4 text                                                  
-#>   <chr> <chr> <chr> <chr> <chr>                                                 
-#> 1 4007  6399  4134  6440  "take?"                                               
-#> 2 4007  6478  4170  6512  "educat"                                              
-#> 3 4006  6400  4874  6729  "I answer unhesitatingly, and train our own people to…
-#> 4 4008  6770  4924  7554  "At Whitney there is being de veloped a water power w…
-#> 5 4159  7573  4725  7621  "(Continued on third page. )"                         
-#> 6 0     0     5150  8000  ""
+# Extract paragraph text
+text = paragraphs(outputfiles)
+tail(text[[1]]) # First page
 ```
 
-Visualize result using [hocrjs](https://github.com/kba/hocrjs):
+<div data-pagedtable="false">
+
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["bbox1"],"name":[1],"type":["chr"],"align":["left"]},{"label":["bbox2"],"name":[2],"type":["chr"],"align":["left"]},{"label":["bbox3"],"name":[3],"type":["chr"],"align":["left"]},{"label":["bbox4"],"name":[4],"type":["chr"],"align":["left"]},{"label":["text"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"4001","2":"5810","3":"4872","4":"6309","5":"ural forces to do the work which we would make cheap laborers do if we’ tinderteok to use cheap labor instead of natural forces. For example, as between util izing the rivers versus importing Chinese coolie"},{"1":"4221","2":"6182","3":"4872","4":"6455","5":"forces of our we under I answer unhesitatingly,"},{"1":"4006","2":"6327","3":"4874","4":"6729","5":"labor, which should take? educate and train our own people to develop and use the water pow ers rather than import any alien race for labor."},{"1":"4008","2":"6770","3":"4924","4":"7554","5":"At Whitney there is being .de veloped a water power which will yield over forty thousand horse power. This is the equivalent of 320,000 coolies.. As long as we depended on slave labor our im mense natutal resources and forces remained undeveloped and use less. Now that we are relying upon free and independent. white . labor again and that the com e"},{"1":"4159","2":"7573","3":"4725","4":"7621","5":"(Continued on third page.)"},{"1":"0","2":"0","3":"5150","4":"8000","5":""}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+
+</div>
+
+Visualize the result using [hocrjs](https://github.com/kba/hocrjs):
 
 ``` r
-webpage = visualize_html(outputfiles[[1]], outputdir="data-raw") # webpage is at data-raw/dchnp71001-html
-browseURL(webpage) # Note: bring up the hocrjs menu and select "show background image"
+webpages = visualize_html(outputfiles, outputdir="data-raw/html") # webpage is at data-raw/html/dchnp71001-html
+browseURL(webpages[[1]]) # Note: bring up the hocrjs menu and select "show background image"
 ```
 
 ![](hocrjs.png)
+
+## Ground truth
+
+Paragraphs of the first issue have been annotated according to the
+article to which they belong.
+
+``` r
+# Ground truth for first page
+tail(vol1_paragraphs_truth[[1]])
+```
+
+<div class="kable-table">
+
+|    | bbox1 | bbox2 | bbox3 | bbox4 | text                                                                                                                                                                                                                                                                                                                                                           | articleID | category | note                    |
+| :- | ----: | ----: | ----: | ----: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------: | :------- | :---------------------- |
+| 94 |  4001 |  5810 |  4872 |  6309 | ural forces to do the work which we would make cheap laborers do if we’ tinderteok to use cheap labor instead of natural forces. For example, as between util izing the rivers versus importing Chinese coolie                                                                                                                                                 |         2 | text     |                         |
+| 95 |  4221 |  6182 |  4872 |  6455 | forces of our we under I answer unhesitatingly,                                                                                                                                                                                                                                                                                                                |         2 | text     | segmentation error      |
+| 96 |  4006 |  6327 |  4874 |  6729 | labor, which should take? educate and train our own people to develop and use the water pow ers rather than import any alien race for labor.                                                                                                                                                                                                                   |         2 | text     |                         |
+| 97 |  4008 |  6770 |  4924 |  7554 | At Whitney there is being .de veloped a water power which will yield over forty thousand horse power. This is the equivalent of 320,000 coolies.. As long as we depended on slave labor our im mense natutal resources and forces remained undeveloped and use less. Now that we are relying upon free and independent. white . labor again and that the com e |         2 | text     |                         |
+| 98 |  4159 |  7573 |  4725 |  7621 | (Continued on third page.)                                                                                                                                                                                                                                                                                                                                     |         2 | text     | continued on third page |
+| 99 |     0 |     0 |  5150 |  8000 |                                                                                                                                                                                                                                                                                                                                                                |        NA |          |                         |
+
+</div>

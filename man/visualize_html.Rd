@@ -4,10 +4,10 @@
 \alias{visualize_html}
 \title{In-browser visualization of hocr files}
 \usage{
-visualize_html(hocr_file, outputdir=".")
+visualize_html(hocr_files, outputdir=".")
 }
 \arguments{
-\item{hocr_file}{hocr file path to visualize.}
+\item{hocr_files}{list of  hocr file paths to visualize.}
 
 \item{outputdir}{directory where to store the viewable html. This html file has the same name as the hocr file and can be opened in any browser.}
 }

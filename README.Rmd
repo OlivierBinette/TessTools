@@ -1,10 +1,13 @@
 ---
-output: github_document
+output: 
+  github_document:
+    df_print: kable
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
+library(TessTools)
 knitr::opts_chunk$set(message=FALSE, warning=FALSE,
   collapse = TRUE,
   comment = "#>",
@@ -17,7 +20,7 @@ knitr::opts_chunk$set(message=FALSE, warning=FALSE,
 
 ![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 
-Interface to the Tesseract OCR command line tool and parsing functions. This is under development.
+Interface to the Tesseract OCR command line tool (version 4) and parsing functions for the analysis of historical newspaper archives. This is under development.
 
 
 ## Installation
@@ -43,23 +46,32 @@ devtools::install_github("OlivierBinette/TessTools")
 
 Run Tesseract OCR on newspaper scans. Extract paragraph text and bounding boxes:
 
-```{r example}
+```{r example, cache=TRUE}
 library(TessTools)
 
 # Run Tesseract OCR and get hocr output file paths.
-# outputdir is the directory where hocr files are stored, exdir is where images are extracted to.
-outputfiles = hocr_from_zip("data-raw/dchnp71001.zip", outputdir="data-raw", exdir="data-raw")
+# Newspaper scans from https://library.duke.edu/digitalcollections/dukechronicle_dchnp71001/
+outputfiles = hocr_from_zip("data-raw/dchnp71001.zip", outputdir="data-raw/hocr", exdir="data-raw/img")
 
-# Extract paragraph text from the first page.
-text = paragraphs(outputfiles[[1]])
-tail(text)
+# Extract paragraph text
+text = paragraphs(outputfiles)
+tail(text[[1]]) # First page
 ```
 
-Visualize result using [hocrjs](https://github.com/kba/hocrjs):
+Visualize the result using [hocrjs](https://github.com/kba/hocrjs):
 
 ```{r}
-webpage = visualize_html(outputfiles[[1]], outputdir="data-raw") # webpage is at data-raw/dchnp71001-html
-browseURL(webpage) # Note: bring up the hocrjs menu and select "show background image"
+webpages = visualize_html(outputfiles, outputdir="data-raw/html") # webpage is at data-raw/html/dchnp71001-html
+browseURL(webpages[[1]]) # Note: bring up the hocrjs menu and select "show background image"
 ```
 
 ![](hocrjs.png)
+
+## Ground truth
+
+Paragraphs of the first issue have been annotated according to the article to which they belong.
+
+```{r}
+# Ground truth for first page
+tail(vol1_paragraphs_truth[[1]])
+```

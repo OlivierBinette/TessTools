@@ -1,0 +1,100 @@
+bbox1,bbox2,bbox3,bbox4,text,articleID,category,note
+540,554,2236,914,ope TRINITY,,meta,
+1055,970,4829,1021,,,separator,
+359,1046,866,1141,wt 1 No.1.,,meta,
+1746,1015,2787,1025,,,,
+3626,985,4827,999,,,,
+1618,1025,3634,1119,"TRINITY COLLEGE. DURHAM, N. C., DECEMBER 19, 1905.",,meta,
+4255,1027,4820,1083,PRICE 5 CENTS.,,meta,
+359,1152,4828,1223,,,separator,
+481,1251,1099,1314,HESPERIAN VS. COLUMBIAN.,1,title,
+361,1394,1225,1554,Sixteenth Annual Inter-Society Debate ---Won By the Hesperian.,1,title,
+424,1592,822,1653,A great debate!,1,text,
+363,1671,1231,2385,"When the historian shall go to write the record of the debates between the Columbian and Hes perian Literary Societies there will be no brighter page in all the annals than that of the debate for the year 1905-06, which was held in the Craven Memorial Hall, Saturday evening, Decem ber€6, 1905.",1,text,
+369,2388,1247,4529,"For the past half decade each one of these contests has been marked as being of a high order, the question being handled with the skill of trained speakers, with cogent logic, and the speakers presenting their arguments in and easy-flowing . lan guage. The debate Saturday evening was up to, if not better, than the standard that had al ready been set in the years past. The subject debated was not an over-argued one that had lost nearly all of its interest by having been used over and over again. Instead it was a very live ques tion, one of very vital importance just at this time, and, further more, it was interesting to an audience composed of other than college people. In its wording no flaws were found, and this eliminated nearly all tie “quib bling that is characteristlc of many otherwise good debates. The speakers were imbued with love for the contest as their glow ing enthusiasm showed from time to time.",1,text,
+383,4545,1251,5109,"Despite the exceedingly unta votable weather conditions about three hundred people composed the audience. , These were mostly members of the college commun ity, the people of Durham who usually are present on these -oc casions being kept away by mud",1,text,
+372,2907,554,2951,smooth,1,text,segmentation error
+389,5130,623,5175,and mist.,1,text,
+393,5192,1271,6478,"The meeting was presided over by Dr. Edwin Mims, of the chair of English Literature. With him on the stage was Mr. Garland Greever, teacher in the Durham High School, as timekeeper. Im mediately in front of the presid ing officer sat those who composed the committee of decision. They were Dr. R. C. Beaman, pastor of Trinity Cherch, Durham, Dr. W. H. Glasson, professor of econom ics and social science, and Prof. ASC. McIntosh, ‘of the depart ment of law,—preacher, econo mist and lawyer who were well qualified to act in the capacity of judges.",1,text,
+404,6487,1270,7120,"The marshals who seated the audience and waited upon the speakers were: From the Hes perian Society, J. B. Aiken, L. E. Blanchard, L. J. Carter, and Fred Flowers; from the Columbian So ciety, J. F. McGhee, J. A. Mor gan, F. A. Ogburn, K. W. Par ham, and T. G. Stem.",1,text,
+607,7155,1068,7201,QUERY DISCUSSED.,1,text,subtitle
+469,7218,881,7275,The query read:,1,text,
+408,7287,1271,7631,"“Resolved, That the Federal Government Should Be Given Power to Assume Uniform Reg ulation and Control over Ameri can Life Insurance Companies.”’",1,text,
+1243,1222,1297,7641,,,separator,
+1261,1242,2129,2516,"The affirmative side was up held by the Columbians, with C. E. Phillips, of Salisbury, and Hersey E. Spence, of South Mills, as representatives; the negative was defended by the Hesperians, with A. L. Wissburg, of Durham, and Holland Holton, of Durham, as speakers. On the first speeches each debater was allowed sixteen minutes, and on the rejoinder, the first man on each side had six, and the last one, seven. This amount gave each speaker ample time to set forth his argument, and it was also not enough to cause the audience to become wearied.",1,text,
+1501,2530,1892,2587,THE SPEAKERS.,1,text,subtitle
+1329,2610,2130,2666,The affirmative was opened by,1,text,
+1271,2683,2139,2743,Mr. Phillips who spoke in part as,1,text,
+1273,2762,2133,2948,follows: He. began by what a great part life insurance,1,text,
+1919,2816,2134,2869,showing,1,text,segmentation error
+1274,2959,2138,3872,"plays in the commercial and in dustrial life of the ‘nation: how it increases national credit as well as individual integrity. He said that out of 80,000,000 of people more than 20,000,000 carry life insurance policies, and that they pay annually premiums to the amount of more than $600,000, ooo—which is more money than is now in circulation in this coun try or the entire capital of all our national banks.",1,text,
+1280,3893,2144,4304,Then he continued by showing what faith the people had put in irisurance; ‘and Ow tivac’ Yaitiy has been thwarted by recent in vestigations bringing to light that the officers and directors of many,1,text,
+1282,4324,2143,4385,companies had not only embez,1,text,
+1282,4396,2163,6117,"zied huge sums of the policy holders funds, but that they had at different times made enormous contributions to political cam paign funds; that they had not only appropriated huge amounts with which the balance of power in legislation was turned their way, but that they had invested millions in Wall Street specula~ tions, co-operating with trusts and combines and putting the proceeds into their own pockets when they should have gone into those of the policy-holders, Il lustrating these points, he espe cially arraigned the Equitable, the Mutual, the New York Life, and the Metropolitan Life Insur ance companies, showing how treacherously Presidents Alexan McCall, McCurdy, Hyde, Hegeman and others had dealt with the people’s money, by vot",1,text,
+1299,5919,1388,5970,"der,",1,text,segmentation error
+1302,6129,2169,6617,"ing themselves salaries of from $75,000 to $150,000 annually; and how they had been living in ex travagantly furnished residences and offices—all at the expense of people who obey the strictest rules of economy.",1,text,
+1305,6634,2170,7192,"In mentioning the managing expenses of our insurance com panies, the speaker claimed that the cost in this country hasbeen 48 per cent of the entire income from the asset investment, against 7 per cent in Germany, and 9.2 per cent, in England.",1,text,
+1307,7209,2177,7629,"Such extravagance, he claimed, makes our rate of insurance too high. In connection with this he further claimed that insurance, in many instances, cost more tor wage earners than for men of",1,text,
+2139,1222,2196,7636,,,separator,
+2158,1234,3031,1870,"more favorable circumstances. Then he furiously attacked the 20-year endowment and all de ferred dividend policies, saying that they were instituted by the insurance officials in order to fill their treasuries quickly so they could begin their systems of graft.",1,text,
+2162,1879,3030,2231,"In the climax, the speaker, in a forceful manner, brought forth serious charges against the insurance companies, and, emphasizing the fact that",1,text,
+2165,2244,3030,2302,state supervision had by no means,1,text,
+2163,2029,2540,2075,a number of,1,text,segmentation error
+2165,2314,3032,2811,"met the requirements, he claimed that the Federal should be given power to assume uniform control over American Life Insurance companies. Following him came Mr. Wiss burg in behalf of the negative.",1,text,
+2722,2396,3030,2443,SONG ment,,,
+2171,2820,3029,2879,A synopsis of his speech follows:,1,text,
+2173,2891,3033,3242,"‘The purpose of State supervis To see that the insurance laws of the State 2, Lo see that the policy-holders receive equitable",1,text,
+2171,2967,2704,3167,ion is three fold: 1. are obeyed.,1,text,segmentation error
+2171,3256,3054,4608,"treatment from the insurance cor porations. 3. Tosee that the in surance companies themselves re ceive fair treatment. Supervis ion being a necessity, we call upon our opponents to face 55 years of uprecedented success un der State supervision, its contin ued growth in strength and the security it offers to its policy-hol ders and also its present solvent condition. ” if 18 encumibeut upon’ the opposition to prove that re gardless of its wonderful success under State supervision, Federal regulation will best serve the We shall endeavor to prove that the proposed plan of placing within the power of",1,text,
+2181,4621,3041,4678,the Federal government the right,1,text,
+2179,4409,2506,4451,ends in view.,1,text,segmentation error
+2180,4692,3049,5173,"to regulate and control the busi ness of life insurance would be detrimental to the material iuter est involved: to the rights of the States and their citizens and to the stability of the National Gov ernment,",1,text,
+2191,5200,3058,5607,"like business, must be conducted on State super vision has recognized its duties to corporations that are subject to its laws and has taken all reason",1,text,
+2249,5199,3052,5260,"Insurance, every other",1,text,segmentation error
+2190,5346,2683,5402,business principles.,1,text,segmentation error
+2193,5635,3067,6197,"able precaution to insure the se curity of the policy—holders’ in vestment; to prevent violations of law, aud infringement upon the rights of other citizens by the companies. It has allowed these theze fundamental principles of busi",1,text,
+2199,6071,2873,6128,companies by following,1,text,segmentation error
+2200,6214,3071,6767,"ness, to become the safest, the strongest and most beneficial in the world. The very essence of Federal supervision, on the other hand, is an imposition of needless restraint aud is in direct opposi tion to every principle of free dom.”’",1,text,
+2205,6796,3073,7488,"As a evidence of the strength, their assets at present exceed two and a half billion dollars, and is annually augmented by more than $200,000,000. The safety of the companies are so apparent and their financial condition so unimpeachablethat alarmists have been forced to admit that invest ments in insurance is safer than",1,text,
+2208,7515,3072,7630,investments in any other enter (Continued on second page.),1,text,continued on second page
+3043,1199,3097,7634,,,separator,
+3061,1180,3924,1275,"MR. D. A. TOMPKINS, OF CHARLOTTE.",2,title,
+3062,1356,3928,1514,Prominent N. €. Business Man Speaks to Trinity Students.,2,title,
+3064,1548,3933,2251,"The first lecture arranged for by the committee of public speak ing for this year was delivered Friday evening in Craven Memo rial Hall by Mr. D. A. Tomp kins, of Charlotte, N. C. Owing to the very inclement weather there was only a small audience to hear his address. Especially were the students noticeable in",2,text,
+3069,2275,3935,2324,their absence. The address was,2,text,
+3068,2345,3944,2396,one of the best that has been.,2,text,
+3068,2417,3945,3267,"heard here lately in that it was so very practical and plain. ‘Thespeaker is one of the State’s best -business and every utterance of his was backed by the life which he has himself lived. Heis one of the proprietors of the Charlotte Observer, a miil man of great repute, and has re cently been appointed as one of the directors of the Equitable Life Assurance Society. He is",2,text,
+3488,2652,3593,2678,men,2,text,segmentation error
+3071,3291,3941,3631,"also a member States Industrial Commission. Dr. Kilgo, in introducing him, “We count exceedingly fortunate",2,text,
+3072,3507,3943,4053,"spoke as follows: ourselves in having with us this evening Mr. D, A. Tompkins, of Char lotte. Amonp the men who are great thinkers and workers in Southern life today, none stand resesnciedAbaw Me.<hompls",2,text,
+3876,4022,3940,4058,RS Tar em,,,error
+3075,4079,3950,4567,"and none more competent to talk to young men. He is one of those men who have made things continue to make thingshappen. Therefore, it is with great pleasure that I in troduce him to you.”’",2,text,
+3079,4584,3955,4779,The theme of the speaker of of the evening was ‘‘The Value of Education in Practical Work.”’,2,text,
+3084,4804,3715,4859,Here follows his speech:,2,text,
+3077,4300,3571,4357,happen and who,2,text,segmentation error
+3085,4885,3956,5235,"Gentlemen of Trinity College: I have often tion is the lowest priced thing in the world to buy and the highest priced thing to sell, if the com",2,text,
+3506,4958,3953,5000,said that educa,2,text,segmentation error
+3091,5247,3958,5584,"modity is made to suit the pur chaser, the public; and yet it is impossible to define what under varying conditions constitutes an education.",2,text,
+3099,5617,3964,6105,The elements vary from time to time according to varying con ditions and they vary also with the purpose for which an educa It re quires the utmost vigilance and the utmost forethought to so,2,text,
+3102,6122,3965,6217,formulate the plan of life for a 3,2,text,
+3102,5907,3750,5965,tion is being undertaken.,2,text,segmentation error
+3102,6194,3974,7624,"boy and a youth as to fit anc equip his mind, body, and moral character for efficient work in a particular line of work and to be a useful member of the com munity in which he may live, In addition to this difficulty of deter mining what education should be given to a youth in certain condi tions, the conditions change and their changes require mental instruction to keep the man abreast of the times and fitted to compete in the new con ditions. ‘The oldidea that educa tion was a thing to be accom plished and done with in boyhood and youth can no longer hold. The modern physician or surgeon must constantly study and some",2,text,
+3792,6915,3971,6969,supple,2,text,segmentation error
+3538,3285,3953,3330,of the United:,2,text,segmentation error
+3945,1166,4001,7629,,,separator,
+3964,1214,4833,1706,"times even stop his practice to take a course under suine special master to bring his education up to date. So with the locomotive engineer, the train hand, and others in responsible engineering or other industrial positions.",2,text,
+3968,1723,4842,2418,It rarely happens that a com mon school or a high school or even a college education properly equips a young man for a_ partic ular line of work. Therefore special schools and other facilities for special study and instruction are coming to be one of the most important factors in modern edu cation.,2,text,
+3973,2447,4902,3880,"Every education as received in the public schools and colleges, is incomplete. Practical life re quires in addition to general edu cation some specific supplemental instruction to adopt a general ed ucation to the requirement; of the particular work in hand. ‘This can generally only be done in, special day schools or night schools: which do not undertake ., to a general education. There are many who do not ap preciate this deficiency of general education and to whom it never occurs to take steps to correct it. The correction is easier done than one would unaturallysuppose. ‘The nan or the wants to work can general'y find",2,text,
+4076,3259,4182,3298,give,2,text,segmentation error
+3979,3752,4846,4380,"at work one who some night school or some _onro fessor or school ted@herre 4 person who will wives a * price, some special MnStrieee” fllupagapin an education to qualify a boy or man to do some special work.",2,text,
+3984,4410,4848,4885,"Schools and colleges doing gen eral work will naturally try to supply more complete education, but on the otuer hand industrial development will become more exacting and will probably keep ahead.",2,text,
+4110,4937,4724,4976,EDUCATION AND LABOR.,2,text,subtitle
+3992,5012,4865,5723,When labor is scarce there are two methods of relief. Que is immigration and the other is in discerning natural forces and re sources and in devising machinery aud*appliances to harness these. To take advantage of the latter method the essential factor is education and _ practical training as will equip and qualify,2,text,
+3999,5593,4109,5634,such,2,text,segmentation error
+3977,5738,4866,5790,‘our boys and men to convert nat,2,text,
+4001,5810,4872,6309,"ural forces to do the work which we would make cheap laborers do if we’ tinderteok to use cheap labor instead of natural forces. For example, as between util izing the rivers versus importing Chinese coolie",2,text,
+4221,6182,4872,6455,"forces of our we under I answer unhesitatingly,",2,text,segmentation error
+4006,6327,4874,6729,"labor, which should take? educate and train our own people to develop and use the water pow ers rather than import any alien race for labor.",2,text,
+4008,6770,4924,7554,"At Whitney there is being .de veloped a water power which will yield over forty thousand horse power. This is the equivalent of 320,000 coolies.. As long as we depended on slave labor our im mense natutal resources and forces remained undeveloped and use less. Now that we are relying upon free and independent. white . labor again and that the com e",2,text,
+4159,7573,4725,7621,(Continued on third page.),2,text,continued on third page
+0,0,5150,8000,,,,

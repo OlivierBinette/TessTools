@@ -4,10 +4,10 @@
 \alias{paragraphs}
 \title{Extract text paragraphs and bounding boxes from hocr file.}
 \usage{
-paragraphs(hocr_file)
+paragraphs(hocr_files)
 }
 \arguments{
-\item{hocr_file}{path to hocr file.}
+\item{hocr_files}{list of paths to hocr file.}
 }
 \value{
 dataframe with columns "bbox1", "bbox2", "bbox3", "bbox4" and "text" for the four corners of the paragraph bounding box and the text content.
