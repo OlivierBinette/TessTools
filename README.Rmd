@@ -44,24 +44,29 @@ devtools::install_github("OlivierBinette/TessTools")
 ```
 ## Example
 
-Run Tesseract OCR on newspaper scans. Extract paragraph text and bounding boxes:
+Download the first issue (1905) of the Duke Chronicle newspaper.
 
-```{r example, cache=TRUE}
+```{r example}
 library(TessTools)
 
-# Run Tesseract OCR and get hocr output file paths.
-# Newspaper scans from https://library.duke.edu/digitalcollections/dukechronicle_dchnp71001/
-outputfiles = hocr_from_zip("data-raw/dchnp71001.zip", outputdir="data-raw/hocr", exdir="data-raw/img")
+issueID = chronicle_meta[1, "local_id"]
+zipfile = download_chronicle(issueID, outputdir="data-raw")
+```
+
+Now we run Tesseract OCR on the newspaper scans and extract text paragraphs together with their bounding boxes.
+
+```{r, cache=TRUE}
+hocrfiles = hocr_from_zip(zipfile, outputdir="data-raw/hocr", exdir="data-raw/img")
 
 # Extract paragraph text
-text = paragraphs(outputfiles)
+text = paragraphs(hocrfiles)
 tail(text[[1]]) # First page
 ```
 
 Visualize the result using [hocrjs](https://github.com/kba/hocrjs):
 
 ```{r}
-webpages = visualize_html(outputfiles, outputdir="data-raw/html") # webpage is at data-raw/html/dchnp71001-html
+webpages = visualize_html(hocrfiles, outputdir="data-raw/html") # webpage is at data-raw/html/dchnp71001-html
 browseURL(webpages[[1]]) # Note: bring up the hocrjs menu and select "show background image"
 ```
 
