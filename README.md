@@ -54,19 +54,16 @@ hocrfiles = hocr_from_zip(zipfile, outputdir="data-raw/hocr", exdir="data-raw/im
 
 # Extract paragraph text
 text = paragraphs(hocrfiles)
-tail(text[[1]]) # First page
+tail(text[[1]][9:11, ]) # First page
 ```
 
 <div class="kable-table">
 
-| bbox1 | bbox2 | bbox3 | bbox4 | text                                                                                                                                                                                                                                                                                                                                                           |
-| :---- | :---- | :---- | :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 4007  | 6399  | 4134  | 6440  | take?                                                                                                                                                                                                                                                                                                                                                          |
-| 4007  | 6478  | 4170  | 6512  | educat                                                                                                                                                                                                                                                                                                                                                         |
-| 4006  | 6400  | 4874  | 6729  | I answer unhesitatingly, and train our own people to develop and use the water pow ers rather than import any alien race for labor.                                                                                                                                                                                                                            |
-| 4008  | 6770  | 4924  | 7554  | At Whitney there is being de veloped a water power which will yield over forty thousand horse power. This is the equivalent of 320,000 coolies.. As long as we depended on slave labor our im mense natutal resources and forces remained undeveloped and use less.) Now that we are relying upon free and independent. white . labor again and that the com e |
-| 4159  | 7573  | 4725  | 7621  | (Continued on third page. )                                                                                                                                                                                                                                                                                                                                    |
-| 0     | 0     | 5150  | 8000  |                                                                                                                                                                                                                                                                                                                                                                |
+| bbox1 | bbox2 | bbox3 | bbox4 | text                                                         |
+| :---- | :---- | :---- | :---- | :----------------------------------------------------------- |
+| 481   | 1251  | 1099  | 1314  | HESPERIAN VS. COLUMBIAN.                                     |
+| 361   | 1394  | 1225  | 1554  | Sixteenth Annual Inter-Society Debate –Won By the Hesperian. |
+| 424   | 1592  | 822   | 1653  | A great debate\!                                             |
 
 </div>
 
