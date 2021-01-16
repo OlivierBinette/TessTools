@@ -54,7 +54,7 @@ hocrfiles = hocr_from_zip(zipfile, outputdir="data-raw/hocr", exdir="data-raw/im
 
 # Extract paragraph text
 text = paragraphs(hocrfiles)
-tail(text[[1]][9:11, ]) # First page
+text[[1]][9:11, ] # Some paragraphs on the first page
 ```
 
 <div class="kable-table">
