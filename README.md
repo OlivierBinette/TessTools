@@ -45,8 +45,8 @@ issueID = chronicle_meta[1, "local_id"]
 zipfile = download_chronicle(issueID, outputdir="data-raw")
 ```
 
-Now we run Tesseract OCR on the newspaper scans and extract text
-paragraphs together with their bounding boxes.
+Run Tesseract OCR on the newspaper scans and extract text paragraphs
+together with their bounding boxes.
 
 ``` r
 hocrfiles = hocr_from_zip(zipfile, outputdir="data-raw/hocr", exdir="data-raw/img")
