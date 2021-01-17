@@ -27,7 +27,7 @@ hocr_from_images <- function(imgfiles, outputdir=".", silent=FALSE, options="") 
     cmd = paste("tesseract",
                 normalizePath(imgfiles[[i]]),
                 file.path(outputdir, imgnames[[i]]),
-                "hocr",
+                "configs/chronicle",
                 options)
     system(cmd, wait=TRUE, ignore.stdout=silent)
   }, mc.cores = parallel::detectCores(), mc.preschedule = FALSE)
