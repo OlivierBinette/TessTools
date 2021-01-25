@@ -44,7 +44,7 @@ devtools::install_github("OlivierBinette/TessTools")
 ```
 ## Example
 
-Download the first issue (1905) of the Duke Chronicle newspaper.
+Download the first issue (1905) of the Duke Chronicle newspaper. 
 
 ```{r example}
 library(TessTools)

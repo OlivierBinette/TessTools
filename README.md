@@ -62,7 +62,7 @@ text[[1]][9:11, ] # Some paragraphs on the first page
 | bbox1 | bbox2 | bbox3 | bbox4 | text                                                         |
 | :---- | :---- | :---- | :---- | :----------------------------------------------------------- |
 | 481   | 1251  | 1099  | 1314  | HESPERIAN VS. COLUMBIAN.                                     |
-| 361   | 1394  | 1225  | 1554  | Sixteenth Annual Inter-Society Debate –Won By the Hesperian. |
+| 361   | 1394  | 1225  | 1554  | Sixteenth Annual Inter-Society Debate —Won By the Hesperian. |
 | 424   | 1592  | 822   | 1653  | A great debate\!                                             |
 
 </div>
