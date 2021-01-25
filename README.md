@@ -4,6 +4,7 @@
 # TessTools: Tools for the use of Tesseract OCR in R
 
 ![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
+[![R-CMD-check](https://github.com/OlivierBinette/historical-newspaper-analysis/workflows/R-CMD-check/badge.svg)](https://github.com/OlivierBinette/historical-newspaper-analysis/actions)
 
 Interface to the Tesseract OCR command line tool (version 4) and parsing
 functions for the analysis of historical newspaper archives. This is
